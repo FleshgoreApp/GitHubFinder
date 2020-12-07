@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  BaseNavigationController.swift
 //  GitHubFinder
 //
 //  Created by Saul Goodman on 07.12.2020.
@@ -7,13 +7,8 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-    
+final class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
-        setup()
-    }
-    
-    func setup() {
         self.view.backgroundColor = Constant.Color.navigationBarColor
     }
 }

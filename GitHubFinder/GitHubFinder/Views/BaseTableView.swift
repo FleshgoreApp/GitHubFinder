@@ -11,7 +11,7 @@ protocol iBaseTableView {
     func basicSettingsWith(_ view: UIViewController)
 }
 
-class BaseTableView: UITableView {
+final class BaseTableView: UITableView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -24,7 +24,7 @@ class BaseTableView: UITableView {
     }
     
     private func setup() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = Constant.Color.navigationBarColor
         self.tableFooterView = UIView()
         self.keyboardDismissMode = .onDrag
     }
