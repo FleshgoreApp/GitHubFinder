@@ -14,9 +14,11 @@ protocol HomeWireframeInterface: WireframeInterface {
 }
 
 protocol HomeViewInterface: ViewInterface {
+    func setViewTitle(_ title: String?)
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    func viewDidLoad()
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

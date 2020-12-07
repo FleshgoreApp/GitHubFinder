@@ -30,4 +30,7 @@ final class HomePresenter {
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
+    func viewDidLoad() {
+        view.setViewTitle("GitHubFinder")
+    }
 }

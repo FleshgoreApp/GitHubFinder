@@ -10,7 +10,7 @@
 
 import UIKit
 
-final class DetailViewController: UIViewController {
+final class DetailViewController: BaseViewController {
 
     // MARK: - Public properties -
 

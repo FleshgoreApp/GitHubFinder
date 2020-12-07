@@ -10,21 +10,52 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
 
     // MARK: - Public properties -
-
+    @IBOutlet weak var tableView: BaseTableView! {
+        didSet {
+            tableView.basicSettingsWith(self)
+        }
+    }
+    
     var presenter: HomePresenterInterface!
 
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
+    
+    // MARK: - Private -
 
 }
 
-// MARK: - Extensions -
+// MARK: - HomeViewInterface -
 
 extension HomeViewController: HomeViewInterface {
+    func setViewTitle(_ title: String?) {
+        self.title = title
+    }
+}
+
+// MARK: - UITableViewDataSource -
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+// MARK: - UITableViewDelegate -
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("indexPath: \(indexPath.row)")
+    }
 }
