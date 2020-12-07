@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A38BDE4257E91A800A3674D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BDE3257E91A800A3674D /* AppDelegate.swift */; };
 		3A38BDE6257E91A800A3674D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BDE5257E91A800A3674D /* SceneDelegate.swift */; };
-		3A38BDE8257E91A800A3674D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BDE7257E91A800A3674D /* ViewController.swift */; };
-		3A38BDEB257E91A800A3674D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BDE9257E91A800A3674D /* Main.storyboard */; };
 		3A38BDED257E91AC00A3674D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BDEC257E91AC00A3674D /* Assets.xcassets */; };
 		3A38BDF0257E91AC00A3674D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BDEE257E91AC00A3674D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		3A38BDE0257E91A800A3674D /* GitHubFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A38BDE3257E91A800A3674D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A38BDE5257E91A800A3674D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A38BDE7257E91A800A3674D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A38BDEA257E91A800A3674D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A38BDEC257E91AC00A3674D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A38BDEF257E91AC00A3674D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A38BDF1257E91AC00A3674D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,85 @@
 		3A38BDE2257E91A800A3674D /* GitHubFinder */ = {
 			isa = PBXGroup;
 			children = (
+				3A38BDF9257E973A00A3674D /* Application */,
+				3A38BE02257E987E00A3674D /* Common */,
+				3A38BDFF257E979D00A3674D /* Resources */,
+				3A38BE00257E97B100A3674D /* SupportingFiles */,
+				3A38BDFE257E978C00A3674D /* Modules */,
+			);
+			path = GitHubFinder;
+			sourceTree = "<group>";
+		};
+		3A38BDF9257E973A00A3674D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3A38BDFB257E975000A3674D /* Base */,
 				3A38BDE3257E91A800A3674D /* AppDelegate.swift */,
 				3A38BDE5257E91A800A3674D /* SceneDelegate.swift */,
-				3A38BDE7257E91A800A3674D /* ViewController.swift */,
-				3A38BDE9257E91A800A3674D /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3A38BDFB257E975000A3674D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3A38BDFE257E978C00A3674D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3A38BDFF257E979D00A3674D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3A38BDEC257E91AC00A3674D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A38BE00257E97B100A3674D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				3A38BDEE257E91AC00A3674D /* LaunchScreen.storyboard */,
 				3A38BDF1257E91AC00A3674D /* Info.plist */,
 			);
-			path = GitHubFinder;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3A38BE02257E987E00A3674D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3A38BE03257E98A500A3674D /* API */,
+				3A38BE04257E98B000A3674D /* Models */,
+				3A38BE05257E98B900A3674D /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3A38BE03257E98A500A3674D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3A38BE04257E98B000A3674D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A38BE05257E98B900A3674D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +192,6 @@
 			files = (
 				3A38BDF0257E91AC00A3674D /* LaunchScreen.storyboard in Resources */,
 				3A38BDED257E91AC00A3674D /* Assets.xcassets in Resources */,
-				3A38BDEB257E91A800A3674D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A38BDE8257E91A800A3674D /* ViewController.swift in Sources */,
 				3A38BDE4257E91A800A3674D /* AppDelegate.swift in Sources */,
 				3A38BDE6257E91A800A3674D /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +210,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A38BDE9257E91A800A3674D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A38BDEA257E91A800A3674D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A38BDEE257E91AC00A3674D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +344,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JK499BUDJD;
-				INFOPLIST_FILE = GitHubFinder/Info.plist;
+				INFOPLIST_FILE = GitHubFinder/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +364,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JK499BUDJD;
-				INFOPLIST_FILE = GitHubFinder/Info.plist;
+				INFOPLIST_FILE = GitHubFinder/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
