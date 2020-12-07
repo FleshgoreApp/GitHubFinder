@@ -16,6 +16,7 @@ final class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: BaseTableView! {
         didSet {
             tableView.basicSettingsWith(self)
+            tableView.register(UINib(nibName: GitTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: GitTableViewCell.cellID)
         }
     }
     
@@ -48,6 +49,12 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: GitTableViewCell.cellID, for: indexPath) as? GitTableViewCell {
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
 }

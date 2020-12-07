@@ -35,6 +35,8 @@
 		3A4D3CE0257EAC1300BD5281 /* NavigationThemeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CDE257EAC1300BD5281 /* NavigationThemeInitializer.swift */; };
 		3A4D3CE1257EAC1300BD5281 /* Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CDF257EAC1300BD5281 /* Initializer.swift */; };
 		3A4D3CE5257EB42100BD5281 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE4257EB42100BD5281 /* Constants.swift */; };
+		3A4D3CEA257EB93E00BD5281 /* GitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE8257EB93E00BD5281 /* GitTableViewCell.swift */; };
+		3A4D3CEB257EB93E00BD5281 /* GitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		3A4D3CDE257EAC1300BD5281 /* NavigationThemeInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationThemeInitializer.swift; sourceTree = "<group>"; };
 		3A4D3CDF257EAC1300BD5281 /* Initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initializer.swift; sourceTree = "<group>"; };
 		3A4D3CE4257EB42100BD5281 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3A4D3CE8257EB93E00BD5281 /* GitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTableViewCell.swift; sourceTree = "<group>"; };
+		3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		3A38BE31257E9FA100A3674D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A4D3CE7257EB8FF00BD5281 /* Cells */,
 				3A38BE32257E9FC300A3674D /* BaseTableView.swift */,
 				3A38BE35257EA31700A3674D /* BaseViewController.swift */,
 				3A4D3CDA257EAB4800BD5281 /* BaseNavigationController.swift */,
@@ -251,6 +256,15 @@
 				3A4D3CDE257EAC1300BD5281 /* NavigationThemeInitializer.swift */,
 			);
 			path = Initializers;
+			sourceTree = "<group>";
+		};
+		3A4D3CE7257EB8FF00BD5281 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3CE8257EB93E00BD5281 /* GitTableViewCell.swift */,
+				3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A38BDF0257E91AC00A3674D /* LaunchScreen.storyboard in Resources */,
+				3A4D3CEB257EB93E00BD5281 /* GitTableViewCell.xib in Resources */,
 				3A38BDED257E91AC00A3674D /* Assets.xcassets in Resources */,
 				3A38BE12257E9BB300A3674D /* HomeViewController.xib in Resources */,
 				3A38BE22257E9C8000A3674D /* DetailViewController.xib in Resources */,
@@ -334,6 +349,7 @@
 				3A38BE0E257E9BB300A3674D /* HomeInterfaces.swift in Sources */,
 				3A4D3CDB257EAB4800BD5281 /* BaseNavigationController.swift in Sources */,
 				3A38BDE4257E91A800A3674D /* AppDelegate.swift in Sources */,
+				3A4D3CEA257EB93E00BD5281 /* GitTableViewCell.swift in Sources */,
 				3A38BE2D257E9D2200A3674D /* BaseWireframe.swift in Sources */,
 				3A38BE13257E9BB300A3674D /* HomeWireframe.swift in Sources */,
 				3A38BE11257E9BB300A3674D /* HomeInteractor.swift in Sources */,

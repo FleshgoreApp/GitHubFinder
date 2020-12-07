@@ -16,7 +16,7 @@ struct NavigationThemeInitializer: Initializable {
         
         navigationApperance.prefersLargeTitles = true
         navigationApperance.isTranslucent = false
-        navigationApperance.tintColor = .red
+        navigationApperance.tintColor = .systemBlue
         navigationApperance.barTintColor = barTintColor
         navigationApperance.titleTextAttributes = [.foregroundColor: titlesColor]
         navigationApperance.largeTitleTextAttributes = [.foregroundColor: titlesColor]
