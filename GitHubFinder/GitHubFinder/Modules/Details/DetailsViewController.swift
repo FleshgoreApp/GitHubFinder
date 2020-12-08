@@ -22,10 +22,13 @@ final class DetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never
+        setupNavigation()
         presenter.viewDidLoad()
     }
 
+    private func setupNavigation() {
+        navigationItem.largeTitleDisplayMode = .never
+    }
 }
 
 // MARK: - Extensions -

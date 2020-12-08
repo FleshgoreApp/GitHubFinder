@@ -30,6 +30,7 @@ final class HomeViewController: BaseViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
         setupSearchController()
+        setupNavigation()
     }
     
     // MARK: - Private -
@@ -37,6 +38,10 @@ final class HomeViewController: BaseViewController {
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
         searchController.delegate = self
+    }
+    
+    private func setupNavigation() {
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 }
 
