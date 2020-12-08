@@ -39,6 +39,17 @@
 		3A4D3CEB257EB93E00BD5281 /* GitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */; };
 		3A4D3CEE257F618B00BD5281 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CED257F618B00BD5281 /* RepoModel.swift */; };
 		3A4D3CF2257F621F00BD5281 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CF1257F621F00BD5281 /* Enums.swift */; };
+		3A4D3D04257FAAEF00BD5281 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D03257FAAEF00BD5281 /* EndPointType.swift */; };
+		3A4D3D07257FABD500BD5281 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D06257FABD500BD5281 /* HTTPMethod.swift */; };
+		3A4D3D0A257FAC8300BD5281 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D09257FAC8300BD5281 /* HTTPTask.swift */; };
+		3A4D3D0D257FADCF00BD5281 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D0C257FADCF00BD5281 /* ParameterEncoding.swift */; };
+		3A4D3D10257FAEF700BD5281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D0F257FAEF700BD5281 /* NetworkError.swift */; };
+		3A4D3D13257FAFAA00BD5281 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D12257FAFAA00BD5281 /* URLParameterEncoder.swift */; };
+		3A4D3D16257FBD9900BD5281 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D15257FBD9900BD5281 /* JSONParameterEncoder.swift */; };
+		3A4D3D19257FBEB700BD5281 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D18257FBEB700BD5281 /* NetworkRouter.swift */; };
+		3A4D3D1C257FDC4300BD5281 /* GitEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D1B257FDC4300BD5281 /* GitEndPoint.swift */; };
+		3A4D3D1F257FDDB200BD5281 /* GitNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D1E257FDDB200BD5281 /* GitNetworkManager.swift */; };
+		3A4D3D2325802C7700BD5281 /* BaseSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D2225802C7700BD5281 /* BaseSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +87,17 @@
 		3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitTableViewCell.xib; sourceTree = "<group>"; };
 		3A4D3CED257F618B00BD5281 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		3A4D3CF1257F621F00BD5281 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		3A4D3D03257FAAEF00BD5281 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		3A4D3D06257FABD500BD5281 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3A4D3D09257FAC8300BD5281 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		3A4D3D0C257FADCF00BD5281 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		3A4D3D0F257FAEF700BD5281 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3A4D3D12257FAFAA00BD5281 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		3A4D3D15257FBD9900BD5281 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		3A4D3D18257FBEB700BD5281 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		3A4D3D1B257FDC4300BD5281 /* GitEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitEndPoint.swift; sourceTree = "<group>"; };
+		3A4D3D1E257FDDB200BD5281 /* GitNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitNetworkManager.swift; sourceTree = "<group>"; };
+		3A4D3D2225802C7700BD5281 /* BaseSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,19 +182,11 @@
 			children = (
 				3A4D3CF0257F61F700BD5281 /* Enums etc */,
 				3A4D3CD5257EA73800BD5281 /* Extensions */,
-				3A38BE03257E98A500A3674D /* API */,
 				3A38BE04257E98B000A3674D /* Models */,
 				3A38BE05257E98B900A3674D /* Services */,
 				3A38BE25257E9C9100A3674D /* VIPER */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		3A38BE03257E98A500A3674D /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		3A38BE04257E98B000A3674D /* Models */ = {
@@ -186,6 +200,7 @@
 		3A38BE05257E98B900A3674D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3A4D3CFE257FAA6800BD5281 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,8 +292,58 @@
 				3A38BE32257E9FC300A3674D /* BaseTableView.swift */,
 				3A38BE35257EA31700A3674D /* BaseViewController.swift */,
 				3A4D3CDA257EAB4800BD5281 /* BaseNavigationController.swift */,
+				3A4D3D2225802C7700BD5281 /* BaseSearchController.swift */,
 			);
 			path = BaseViewsClasses;
+			sourceTree = "<group>";
+		};
+		3A4D3CFE257FAA6800BD5281 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3CFF257FAA7E00BD5281 /* EndPoint */,
+				3A4D3D00257FAA8C00BD5281 /* Manager */,
+				3A4D3D01257FAA9400BD5281 /* Service */,
+				3A4D3D02257FAAAA00BD5281 /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3A4D3CFF257FAA7E00BD5281 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3D1B257FDC4300BD5281 /* GitEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		3A4D3D00257FAA8C00BD5281 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3D1E257FDDB200BD5281 /* GitNetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3A4D3D01257FAA9400BD5281 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3D03257FAAEF00BD5281 /* EndPointType.swift */,
+				3A4D3D06257FABD500BD5281 /* HTTPMethod.swift */,
+				3A4D3D09257FAC8300BD5281 /* HTTPTask.swift */,
+				3A4D3D0F257FAEF700BD5281 /* NetworkError.swift */,
+				3A4D3D18257FBEB700BD5281 /* NetworkRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3A4D3D02257FAAAA00BD5281 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3D0C257FADCF00BD5281 /* ParameterEncoding.swift */,
+				3A4D3D12257FAFAA00BD5281 /* URLParameterEncoder.swift */,
+				3A4D3D15257FBD9900BD5281 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,29 +419,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A38BE2E257E9D2200A3674D /* InteractorInterface.swift in Sources */,
+				3A4D3D10257FAEF700BD5281 /* NetworkError.swift in Sources */,
 				3A38BE1E257E9C8000A3674D /* DetailsInterfaces.swift in Sources */,
 				3A38BE21257E9C8000A3674D /* DetailsInteractor.swift in Sources */,
 				3A38BE10257E9BB300A3674D /* HomeViewController.swift in Sources */,
 				3A38BE36257EA31700A3674D /* BaseViewController.swift in Sources */,
+				3A4D3D2325802C7700BD5281 /* BaseSearchController.swift in Sources */,
 				3A38BE33257E9FC300A3674D /* BaseTableView.swift in Sources */,
+				3A4D3D0A257FAC8300BD5281 /* HTTPTask.swift in Sources */,
 				3A38BE1F257E9C8000A3674D /* DetailsPresenter.swift in Sources */,
 				3A38BE0E257E9BB300A3674D /* HomeInterfaces.swift in Sources */,
 				3A4D3CDB257EAB4800BD5281 /* BaseNavigationController.swift in Sources */,
 				3A38BDE4257E91A800A3674D /* AppDelegate.swift in Sources */,
 				3A4D3CEA257EB93E00BD5281 /* GitTableViewCell.swift in Sources */,
 				3A4D3CEE257F618B00BD5281 /* RepoModel.swift in Sources */,
+				3A4D3D16257FBD9900BD5281 /* JSONParameterEncoder.swift in Sources */,
 				3A38BE2D257E9D2200A3674D /* BaseWireframe.swift in Sources */,
 				3A38BE13257E9BB300A3674D /* HomeWireframe.swift in Sources */,
 				3A38BE11257E9BB300A3674D /* HomeInteractor.swift in Sources */,
 				3A4D3CD7257EA77400BD5281 /* UITableView+Ex.swift in Sources */,
+				3A4D3D1F257FDDB200BD5281 /* GitNetworkManager.swift in Sources */,
 				3A4D3CF2257F621F00BD5281 /* Enums.swift in Sources */,
+				3A4D3D07257FABD500BD5281 /* HTTPMethod.swift in Sources */,
+				3A4D3D1C257FDC4300BD5281 /* GitEndPoint.swift in Sources */,
 				3A4D3CE0257EAC1300BD5281 /* NavigationThemeInitializer.swift in Sources */,
 				3A38BE20257E9C8000A3674D /* DetailsViewController.swift in Sources */,
 				3A4D3CE1257EAC1300BD5281 /* Initializer.swift in Sources */,
+				3A4D3D13257FAFAA00BD5281 /* URLParameterEncoder.swift in Sources */,
+				3A4D3D04257FAAEF00BD5281 /* EndPointType.swift in Sources */,
 				3A38BE2F257E9D2200A3674D /* ViewInterface.swift in Sources */,
+				3A4D3D19257FBEB700BD5281 /* NetworkRouter.swift in Sources */,
 				3A38BE2B257E9D2200A3674D /* PresenterInterface.swift in Sources */,
 				3A38BE23257E9C8000A3674D /* DetailsWireframe.swift in Sources */,
 				3A38BDE6257E91A800A3674D /* SceneDelegate.swift in Sources */,
+				3A4D3D0D257FADCF00BD5281 /* ParameterEncoding.swift in Sources */,
 				3A38BE2C257E9D2200A3674D /* FormatterInterface.swift in Sources */,
 				3A38BE0F257E9BB300A3674D /* HomePresenter.swift in Sources */,
 				3A4D3CE5257EB42100BD5281 /* Constants.swift in Sources */,

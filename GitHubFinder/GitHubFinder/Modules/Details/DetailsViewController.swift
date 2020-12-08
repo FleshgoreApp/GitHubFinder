@@ -12,6 +12,8 @@ import UIKit
 
 final class DetailsViewController: BaseViewController {
 
+    @IBOutlet fileprivate weak var descriptionLabel: UILabel!
+    
     // MARK: - Public properties -
 
     var presenter: DetailsPresenterInterface!
@@ -29,6 +31,10 @@ final class DetailsViewController: BaseViewController {
 // MARK: - Extensions -
 
 extension DetailsViewController: DetailsViewInterface {
+    func updateView(text: String?) {
+        self.descriptionLabel.text = text
+    }
+    
     func setViewTitle(_ title: String?) {
         self.title = title
     }

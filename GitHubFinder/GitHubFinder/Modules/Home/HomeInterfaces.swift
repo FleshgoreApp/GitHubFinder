@@ -14,13 +14,16 @@ protocol HomeWireframeInterface: WireframeInterface {
 }
 
 protocol HomeViewInterface: ViewInterface {
+    func updateView()
 }
 
 protocol HomePresenterInterface: PresenterInterface {
     var repositories: [RepoModel]? { get }
     
     func didSelectRowAtIndexPath(_ indexPath: IndexPath)
+    func searchBarSearchButtonClicked(searchText: String?)
 }
 
 protocol HomeInteractorInterface: InteractorInterface {
+    func searchRepositoriesWith(text: String, completion: @escaping completionRepositories)
 }

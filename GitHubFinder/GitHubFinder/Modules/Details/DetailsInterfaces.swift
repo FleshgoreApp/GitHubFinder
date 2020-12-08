@@ -14,6 +14,7 @@ protocol DetailsWireframeInterface: WireframeInterface {
 }
 
 protocol DetailsViewInterface: ViewInterface {
+    func updateView(text: String?)
 }
 
 protocol DetailsPresenterInterface: PresenterInterface {

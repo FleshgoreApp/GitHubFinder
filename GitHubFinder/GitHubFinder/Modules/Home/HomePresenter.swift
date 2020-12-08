@@ -20,7 +20,12 @@ final class HomePresenter {
     
     // MARK: - Open properties -
 
-    var repositories: [RepoModel]?
+    var repositories: [RepoModel]? {
+        didSet {
+            repositories?.sort(by: >)
+            view.updateView()
+        }
+    }
     
     // MARK: - Lifecycle -
 
@@ -36,6 +41,15 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view.setViewTitle("GitHubFinder")
+    }
+    
+    func searchBarSearchButtonClicked(searchText: String?) {
+        guard let text = searchText else { return }
+        interactor.searchRepositoriesWith(text: text, completion: { repositories, error in
+            if error == nil {
+                self.repositories = repositories?.items
+            }
+        })
     }
     
     func didSelectRowAtIndexPath(_ indexPath: IndexPath) {

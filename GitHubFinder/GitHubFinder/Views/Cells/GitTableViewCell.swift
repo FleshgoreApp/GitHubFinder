@@ -9,11 +9,12 @@ import UIKit
 
 protocol iGitTableViewCell {
     static var cellID: String { get }
+    func gonfigureBy(repo: iRepoModel)
 }
 
 class GitTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
     static var cellID: String = "GitTableViewCell"
     
     override func awakeFromNib() {
@@ -28,11 +29,14 @@ class GitTableViewCell: UITableViewCell {
     
     private func setupViews() {
         titleLabel.text = "Some text"
-        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         titleLabel.tintColor = .secondaryLabel
+        separatorInset = .zero
     }
 }
 
 extension GitTableViewCell: iGitTableViewCell {
-    
+    func gonfigureBy(repo: iRepoModel) {
+        self.titleLabel.text = repo.description
+    }
 }

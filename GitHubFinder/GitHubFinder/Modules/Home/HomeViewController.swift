@@ -20,6 +20,8 @@ final class HomeViewController: BaseViewController {
         }
     }
     
+    private let searchController = BaseSearchController(searchResultsController: nil)
+    
     var presenter: HomePresenterInterface!
 
     // MARK: - Lifecycle -
@@ -27,15 +29,24 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        setupSearchController()
     }
     
     // MARK: - Private -
-
+    private func setupSearchController() {
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+        searchController.delegate = self
+    }
 }
 
 // MARK: - HomeViewInterface -
 
 extension HomeViewController: HomeViewInterface {
+    func updateView() {
+        tableView.reloadDataOnMainQueue()
+    }
+    
     func setViewTitle(_ title: String?) {
         self.title = title
     }
@@ -45,12 +56,16 @@ extension HomeViewController: HomeViewInterface {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.repositories?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: GitTableViewCell.cellID, for: indexPath) as? GitTableViewCell {
+            
+            if let model = presenter.repositories?[indexPath.row] {
+                cell.gonfigureBy(repo: model)
+            }
             
             return cell
         }
@@ -65,5 +80,25 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectRowAtIndexPath(indexPath)
+    }
+}
+
+//MARK: - UISearchBarDelegate -
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        presenter.searchBarSearchButtonClicked(searchText: searchBar.text)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+}
+
+//MARK: - UISearchControllerDelegate -
+
+extension HomeViewController: UISearchControllerDelegate {
+    func willPresentSearchController(_ searchController: UISearchController) {
+        
     }
 }

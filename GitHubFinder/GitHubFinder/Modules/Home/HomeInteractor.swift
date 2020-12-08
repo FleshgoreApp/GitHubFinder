@@ -10,10 +10,47 @@
 
 import Foundation
 
+typealias completionRepositories = (_ repo: GitApiResponse?, _ error: String?) -> ()
+
 final class HomeInteractor {
+    fileprivate var networkManager: iGitNetworkManager!
+        
+    init(networkManager: GitNetworkManager = GitNetworkManager()) {
+        self.networkManager = networkManager
+    }
 }
 
 // MARK: - Extensions -
 
 extension HomeInteractor: HomeInteractorInterface {
+    func searchRepositoriesWith(text: String, completion: @escaping completionRepositories) {
+        networkManager.router.request(.search(text: text)) { data, response, error in
+            
+            if let response = response as? HTTPURLResponse {
+                
+                let result = self.networkManager.handleNetworkResponse(response)
+                
+                switch result {
+                case .success:
+                    
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    
+                    do {
+                        let apiResponse = try JSONDecoder().decode(GitApiResponse.self, from: responseData)
+                        completion(apiResponse, nil)
+                    }
+                    catch {
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                    
+                    
+                case .failure(let networkFailureError):
+                    print(networkFailureError)
+                }
+            }
+        }
+    }
 }

@@ -36,5 +36,6 @@ final class DetailsPresenter {
 extension DetailsPresenter: DetailsPresenterInterface {
     func viewDidLoad() {
         view.setViewTitle("Details")
+        view.updateView(text: repo?.detailsDescription)
     }
 }
