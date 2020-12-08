@@ -1,5 +1,5 @@
 //
-//  DetailInteractor.swift
+//  DetailsInteractor.swift
 //  GitHubFinder
 //
 //  Created by Saul Goodman on 07.12.2020.
@@ -10,10 +10,10 @@
 
 import Foundation
 
-final class DetailInteractor {
+final class DetailsInteractor {
 }
 
 // MARK: - Extensions -
 
-extension DetailInteractor: DetailInteractorInterface {
+extension DetailsInteractor: DetailsInteractorInterface {
 }

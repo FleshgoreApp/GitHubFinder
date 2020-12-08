@@ -18,7 +18,10 @@ protocol HomeViewInterface: ViewInterface {
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+    var repositories: [RepoModel]? { get }
+    
     func viewDidLoad()
+    func didSelectRowAtIndexPath(_ indexPath: IndexPath)
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

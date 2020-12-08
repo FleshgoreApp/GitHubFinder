@@ -17,12 +17,12 @@
 		3A38BE11257E9BB300A3674D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE0B257E9BB300A3674D /* HomeInteractor.swift */; };
 		3A38BE12257E9BB300A3674D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BE0C257E9BB300A3674D /* HomeViewController.xib */; };
 		3A38BE13257E9BB300A3674D /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE0D257E9BB300A3674D /* HomeWireframe.swift */; };
-		3A38BE1E257E9C8000A3674D /* DetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE18257E9C8000A3674D /* DetailInterfaces.swift */; };
-		3A38BE1F257E9C8000A3674D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE19257E9C8000A3674D /* DetailPresenter.swift */; };
-		3A38BE20257E9C8000A3674D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1A257E9C8000A3674D /* DetailViewController.swift */; };
-		3A38BE21257E9C8000A3674D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1B257E9C8000A3674D /* DetailInteractor.swift */; };
-		3A38BE22257E9C8000A3674D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BE1C257E9C8000A3674D /* DetailViewController.xib */; };
-		3A38BE23257E9C8000A3674D /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1D257E9C8000A3674D /* DetailWireframe.swift */; };
+		3A38BE1E257E9C8000A3674D /* DetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE18257E9C8000A3674D /* DetailsInterfaces.swift */; };
+		3A38BE1F257E9C8000A3674D /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE19257E9C8000A3674D /* DetailsPresenter.swift */; };
+		3A38BE20257E9C8000A3674D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1A257E9C8000A3674D /* DetailsViewController.swift */; };
+		3A38BE21257E9C8000A3674D /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1B257E9C8000A3674D /* DetailsInteractor.swift */; };
+		3A38BE22257E9C8000A3674D /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A38BE1C257E9C8000A3674D /* DetailsViewController.xib */; };
+		3A38BE23257E9C8000A3674D /* DetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE1D257E9C8000A3674D /* DetailsWireframe.swift */; };
 		3A38BE2B257E9D2200A3674D /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE26257E9D2200A3674D /* PresenterInterface.swift */; };
 		3A38BE2C257E9D2200A3674D /* FormatterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE27257E9D2200A3674D /* FormatterInterface.swift */; };
 		3A38BE2D257E9D2200A3674D /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38BE28257E9D2200A3674D /* BaseWireframe.swift */; };
@@ -37,6 +37,8 @@
 		3A4D3CE5257EB42100BD5281 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE4257EB42100BD5281 /* Constants.swift */; };
 		3A4D3CEA257EB93E00BD5281 /* GitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE8257EB93E00BD5281 /* GitTableViewCell.swift */; };
 		3A4D3CEB257EB93E00BD5281 /* GitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */; };
+		3A4D3CEE257F618B00BD5281 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CED257F618B00BD5281 /* RepoModel.swift */; };
+		3A4D3CF2257F621F00BD5281 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3CF1257F621F00BD5281 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +54,12 @@
 		3A38BE0B257E9BB300A3674D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		3A38BE0C257E9BB300A3674D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3A38BE0D257E9BB300A3674D /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
-		3A38BE18257E9C8000A3674D /* DetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaces.swift; sourceTree = "<group>"; };
-		3A38BE19257E9C8000A3674D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		3A38BE1A257E9C8000A3674D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		3A38BE1B257E9C8000A3674D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
-		3A38BE1C257E9C8000A3674D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		3A38BE1D257E9C8000A3674D /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
+		3A38BE18257E9C8000A3674D /* DetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInterfaces.swift; sourceTree = "<group>"; };
+		3A38BE19257E9C8000A3674D /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		3A38BE1A257E9C8000A3674D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3A38BE1B257E9C8000A3674D /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		3A38BE1C257E9C8000A3674D /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		3A38BE1D257E9C8000A3674D /* DetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWireframe.swift; sourceTree = "<group>"; };
 		3A38BE26257E9D2200A3674D /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		3A38BE27257E9D2200A3674D /* FormatterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterInterface.swift; sourceTree = "<group>"; };
 		3A38BE28257E9D2200A3674D /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		3A4D3CE4257EB42100BD5281 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A4D3CE8257EB93E00BD5281 /* GitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTableViewCell.swift; sourceTree = "<group>"; };
 		3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitTableViewCell.xib; sourceTree = "<group>"; };
+		3A4D3CED257F618B00BD5281 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		3A4D3CF1257F621F00BD5281 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 		3A38BE02257E987E00A3674D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3A4D3CF0257F61F700BD5281 /* Enums etc */,
 				3A4D3CD5257EA73800BD5281 /* Extensions */,
 				3A38BE03257E98A500A3674D /* API */,
 				3A38BE04257E98B000A3674D /* Models */,
@@ -181,6 +186,7 @@
 		3A38BE04257E98B000A3674D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A4D3CED257F618B00BD5281 /* RepoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,12 +214,12 @@
 		3A38BE17257E9C2900A3674D /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				3A38BE18257E9C8000A3674D /* DetailInterfaces.swift */,
-				3A38BE19257E9C8000A3674D /* DetailPresenter.swift */,
-				3A38BE1A257E9C8000A3674D /* DetailViewController.swift */,
-				3A38BE1B257E9C8000A3674D /* DetailInteractor.swift */,
-				3A38BE1C257E9C8000A3674D /* DetailViewController.xib */,
-				3A38BE1D257E9C8000A3674D /* DetailWireframe.swift */,
+				3A38BE18257E9C8000A3674D /* DetailsInterfaces.swift */,
+				3A38BE19257E9C8000A3674D /* DetailsPresenter.swift */,
+				3A38BE1A257E9C8000A3674D /* DetailsViewController.swift */,
+				3A38BE1B257E9C8000A3674D /* DetailsInteractor.swift */,
+				3A38BE1C257E9C8000A3674D /* DetailsViewController.xib */,
+				3A38BE1D257E9C8000A3674D /* DetailsWireframe.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -265,6 +271,14 @@
 				3A4D3CE9257EB93E00BD5281 /* GitTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3A4D3CF0257F61F700BD5281 /* Enums etc */ = {
+			isa = PBXGroup;
+			children = (
+				3A4D3CF1257F621F00BD5281 /* Enums.swift */,
+			);
+			path = "Enums etc";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +342,7 @@
 				3A4D3CEB257EB93E00BD5281 /* GitTableViewCell.xib in Resources */,
 				3A38BDED257E91AC00A3674D /* Assets.xcassets in Resources */,
 				3A38BE12257E9BB300A3674D /* HomeViewController.xib in Resources */,
-				3A38BE22257E9C8000A3674D /* DetailViewController.xib in Resources */,
+				3A38BE22257E9C8000A3674D /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,26 +354,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A38BE2E257E9D2200A3674D /* InteractorInterface.swift in Sources */,
-				3A38BE1E257E9C8000A3674D /* DetailInterfaces.swift in Sources */,
-				3A38BE21257E9C8000A3674D /* DetailInteractor.swift in Sources */,
+				3A38BE1E257E9C8000A3674D /* DetailsInterfaces.swift in Sources */,
+				3A38BE21257E9C8000A3674D /* DetailsInteractor.swift in Sources */,
 				3A38BE10257E9BB300A3674D /* HomeViewController.swift in Sources */,
 				3A38BE36257EA31700A3674D /* BaseViewController.swift in Sources */,
 				3A38BE33257E9FC300A3674D /* BaseTableView.swift in Sources */,
-				3A38BE1F257E9C8000A3674D /* DetailPresenter.swift in Sources */,
+				3A38BE1F257E9C8000A3674D /* DetailsPresenter.swift in Sources */,
 				3A38BE0E257E9BB300A3674D /* HomeInterfaces.swift in Sources */,
 				3A4D3CDB257EAB4800BD5281 /* BaseNavigationController.swift in Sources */,
 				3A38BDE4257E91A800A3674D /* AppDelegate.swift in Sources */,
 				3A4D3CEA257EB93E00BD5281 /* GitTableViewCell.swift in Sources */,
+				3A4D3CEE257F618B00BD5281 /* RepoModel.swift in Sources */,
 				3A38BE2D257E9D2200A3674D /* BaseWireframe.swift in Sources */,
 				3A38BE13257E9BB300A3674D /* HomeWireframe.swift in Sources */,
 				3A38BE11257E9BB300A3674D /* HomeInteractor.swift in Sources */,
 				3A4D3CD7257EA77400BD5281 /* UITableView+Ex.swift in Sources */,
+				3A4D3CF2257F621F00BD5281 /* Enums.swift in Sources */,
 				3A4D3CE0257EAC1300BD5281 /* NavigationThemeInitializer.swift in Sources */,
-				3A38BE20257E9C8000A3674D /* DetailViewController.swift in Sources */,
+				3A38BE20257E9C8000A3674D /* DetailsViewController.swift in Sources */,
 				3A4D3CE1257EAC1300BD5281 /* Initializer.swift in Sources */,
 				3A38BE2F257E9D2200A3674D /* ViewInterface.swift in Sources */,
 				3A38BE2B257E9D2200A3674D /* PresenterInterface.swift in Sources */,
-				3A38BE23257E9C8000A3674D /* DetailWireframe.swift in Sources */,
+				3A38BE23257E9C8000A3674D /* DetailsWireframe.swift in Sources */,
 				3A38BDE6257E91A800A3674D /* SceneDelegate.swift in Sources */,
 				3A38BE2C257E9D2200A3674D /* FormatterInterface.swift in Sources */,
 				3A38BE0F257E9BB300A3674D /* HomePresenter.swift in Sources */,
@@ -503,7 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JK499BUDJD;
+				DEVELOPMENT_TEAM = 82RN25AVX5;
 				INFOPLIST_FILE = GitHubFinder/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,7 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JK499BUDJD;
+				DEVELOPMENT_TEAM = 82RN25AVX5;
 				INFOPLIST_FILE = GitHubFinder/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

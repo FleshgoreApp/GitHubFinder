@@ -63,6 +63,7 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("indexPath: \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.didSelectRowAtIndexPath(indexPath)
     }
 }

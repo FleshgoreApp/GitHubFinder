@@ -1,5 +1,5 @@
 //
-//  DetailWireframe.swift
+//  DetailsWireframe.swift
 //  GitHubFinder
 //
 //  Created by Saul Goodman on 07.12.2020.
@@ -10,16 +10,16 @@
 
 import UIKit
 
-final class DetailWireframe: BaseWireframe {
+final class DetailsWireframe: BaseWireframe {
 
     // MARK: - Module setup -
 
-    init() {
-        let moduleViewController = DetailViewController()
+    init(repo: RepoModel?) {
+        let moduleViewController = DetailsViewController()
         super.init(viewController: moduleViewController)
 
-        let interactor = DetailInteractor()
-        let presenter = DetailPresenter(view: moduleViewController, interactor: interactor, wireframe: self)
+        let interactor = DetailsInteractor()
+        let presenter = DetailsPresenter(view: moduleViewController, interactor: interactor, wireframe: self, repo: repo)
         moduleViewController.presenter = presenter
     }
 
@@ -27,5 +27,5 @@ final class DetailWireframe: BaseWireframe {
 
 // MARK: - Extensions -
 
-extension DetailWireframe: DetailWireframeInterface {
+extension DetailsWireframe: DetailsWireframeInterface {
 }

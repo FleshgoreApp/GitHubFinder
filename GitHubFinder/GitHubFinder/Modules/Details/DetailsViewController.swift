@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  DetailsViewController.swift
 //  GitHubFinder
 //
 //  Created by Saul Goodman on 07.12.2020.
@@ -10,11 +10,11 @@
 
 import UIKit
 
-final class DetailViewController: BaseViewController {
+final class DetailsViewController: BaseViewController {
 
     // MARK: - Public properties -
 
-    var presenter: DetailPresenterInterface!
+    var presenter: DetailsPresenterInterface!
 
     // MARK: - Lifecycle -
 
@@ -26,5 +26,5 @@ final class DetailViewController: BaseViewController {
 
 // MARK: - Extensions -
 
-extension DetailViewController: DetailViewInterface {
+extension DetailsViewController: DetailsViewInterface {
 }

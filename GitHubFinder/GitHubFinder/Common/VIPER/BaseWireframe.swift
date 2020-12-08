@@ -8,6 +8,7 @@
 import UIKit
 
 protocol WireframeInterface: class {
+    func navigate(to option: GitNavigationOption)
 }
 
 class BaseWireframe {
@@ -25,7 +26,12 @@ class BaseWireframe {
 }
 
 extension BaseWireframe: WireframeInterface {
-
+    func navigate(to option: GitNavigationOption) {
+        switch option {
+        case .details(let repo):
+            self.navigationController?.pushWireframe(DetailsWireframe(repo: repo), animated: true)
+        }
+    }
 }
 
 extension BaseWireframe {

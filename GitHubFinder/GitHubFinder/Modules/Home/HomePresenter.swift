@@ -17,7 +17,11 @@ final class HomePresenter {
     private unowned let view: HomeViewInterface
     private let interactor: HomeInteractorInterface
     private let wireframe: HomeWireframeInterface
+    
+    // MARK: - Open properties -
 
+    var repositories: [RepoModel]?
+    
     // MARK: - Lifecycle -
 
     init(view: HomeViewInterface, interactor: HomeInteractorInterface, wireframe: HomeWireframeInterface) {
@@ -32,5 +36,9 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view.setViewTitle("GitHubFinder")
+    }
+    
+    func didSelectRowAtIndexPath(_ indexPath: IndexPath) {
+        wireframe.navigate(to: .details(repositories?[indexPath.row]))
     }
 }
