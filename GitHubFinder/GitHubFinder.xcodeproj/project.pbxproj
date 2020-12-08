@@ -122,19 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				3A4D3CDD257EAC1300BD5281 /* Initializers */,
-				3A38BDFB257E975000A3674D /* Base */,
 				3A38BDE3257E91A800A3674D /* AppDelegate.swift */,
 				3A38BDE5257E91A800A3674D /* SceneDelegate.swift */,
 				3A4D3CE4257EB42100BD5281 /* Constants.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		3A38BDFB257E975000A3674D /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		3A38BDFE257E978C00A3674D /* Modules */ = {
@@ -240,9 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4D3CE7257EB8FF00BD5281 /* Cells */,
-				3A38BE32257E9FC300A3674D /* BaseTableView.swift */,
-				3A38BE35257EA31700A3674D /* BaseViewController.swift */,
-				3A4D3CDA257EAB4800BD5281 /* BaseNavigationController.swift */,
+				3A4D3CFC257FA79600BD5281 /* BaseViewsClasses */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +269,16 @@
 				3A4D3CF1257F621F00BD5281 /* Enums.swift */,
 			);
 			path = "Enums etc";
+			sourceTree = "<group>";
+		};
+		3A4D3CFC257FA79600BD5281 /* BaseViewsClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3A38BE32257E9FC300A3674D /* BaseTableView.swift */,
+				3A38BE35257EA31700A3674D /* BaseViewController.swift */,
+				3A4D3CDA257EAB4800BD5281 /* BaseNavigationController.swift */,
+			);
+			path = BaseViewsClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
