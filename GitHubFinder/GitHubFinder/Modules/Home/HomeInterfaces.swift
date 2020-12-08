@@ -14,13 +14,11 @@ protocol HomeWireframeInterface: WireframeInterface {
 }
 
 protocol HomeViewInterface: ViewInterface {
-    func setViewTitle(_ title: String?)
 }
 
 protocol HomePresenterInterface: PresenterInterface {
     var repositories: [RepoModel]? { get }
     
-    func viewDidLoad()
     func didSelectRowAtIndexPath(_ indexPath: IndexPath)
 }
 

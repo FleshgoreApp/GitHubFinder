@@ -34,4 +34,7 @@ final class DetailsPresenter {
 // MARK: - Extensions -
 
 extension DetailsPresenter: DetailsPresenterInterface {
+    func viewDidLoad() {
+        view.setViewTitle("Details")
+    }
 }

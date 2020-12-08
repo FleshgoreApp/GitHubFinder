@@ -20,6 +20,8 @@ final class DetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
+        presenter.viewDidLoad()
     }
 
 }
@@ -27,4 +29,7 @@ final class DetailsViewController: BaseViewController {
 // MARK: - Extensions -
 
 extension DetailsViewController: DetailsViewInterface {
+    func setViewTitle(_ title: String?) {
+        self.title = title
+    }
 }

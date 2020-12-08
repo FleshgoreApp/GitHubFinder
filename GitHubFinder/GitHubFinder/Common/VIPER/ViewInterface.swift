@@ -6,6 +6,7 @@
 //
 
 protocol ViewInterface: class {
+    func setViewTitle(_ title: String?)
 }
 
 extension ViewInterface {
