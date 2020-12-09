@@ -24,8 +24,8 @@ final class HomePresenter {
     var repositories: [RepoModel]? {
         didSet {
             repositories?.sort(by: >)
-            DispatchQueue.main.async {
-                self.view.updateView()
+            DispatchQueue.main.async { [weak self] in
+                self?.view.updateView()
             }
         }
     }
@@ -63,8 +63,8 @@ extension HomePresenter: HomePresenterInterface {
         
         searchGroup.enter()
         
-        userQueue.async {
-            self.interactor.searchRepositoriesWith(text: text, page: self.currentPage, completion: { repositories, error in
+        userQueue.async { [weak self] in
+            self?.interactor.searchRepositoriesWith(text: text, page: self?.currentPage ?? 0, completion: { repositories, error in
 
                 if let items = repositories?.items, error == nil {
                     userQueue.sync(flags: .barrier) {
@@ -79,7 +79,7 @@ extension HomePresenter: HomePresenterInterface {
                 }
             })
        
-            self.interactor.searchRepositoriesWith(text: text, page: self.currentPage+1, completion: { repositories, error in
+            self?.interactor.searchRepositoriesWith(text: text, page: (self?.currentPage ?? 0)+1, completion: { repositories, error in
                 
                 if let items = repositories?.items, error == nil {
                     userQueue.sync(flags: .barrier) {
@@ -95,8 +95,8 @@ extension HomePresenter: HomePresenterInterface {
             })
         }
         
-        searchGroup.notify(queue: DispatchQueue.global()) {
-            self.repositories = temp
+        searchGroup.notify(queue: DispatchQueue.global()) { [weak self] in
+            self?.repositories = temp
         }
     }
     

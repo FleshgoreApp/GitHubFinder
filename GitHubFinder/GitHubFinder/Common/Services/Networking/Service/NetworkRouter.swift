@@ -28,11 +28,11 @@ final class NetworkRouter<EndPoint: EndPointType>: iNetworkRouter {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 
             case .requestParameters(let bodyParameters, let urlParameters):
-                try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
+                try configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
                 
             case .requestParametersAndHeaders(let bodyParameters, let urlParameters, let additionalHeaders):
                 self.addAdditionalHeaders(additionalHeaders, request: &request)
-                try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
+                try configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
             }
             return request
         }

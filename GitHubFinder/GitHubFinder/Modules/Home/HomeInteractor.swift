@@ -13,7 +13,7 @@ import Foundation
 typealias completionRepositories = (_ repo: GitApiResponse?, _ error: String?) -> ()
 
 final class HomeInteractor {
-    fileprivate var networkManager: iGitNetworkManager!
+    private var networkManager: iGitNetworkManager!
     
     init(networkManager: GitNetworkManager = GitNetworkManager()) {
         self.networkManager = networkManager
@@ -25,11 +25,14 @@ final class HomeInteractor {
 extension HomeInteractor: HomeInteractorInterface {
     func searchRepositoriesWith(text: String, page: Int, completion: @escaping completionRepositories) {
         
-        networkManager.router.request(.search(text: text, page: page)) { data, response, error in
+        networkManager.router.request(.search(text: text, page: page)) { [weak self] data, response, error in
             
             if let response = response as? HTTPURLResponse {
                 
-                let result = self.networkManager.handleNetworkResponse(response)
+                guard let result = self?.networkManager.handleNetworkResponse(response) else {
+                    completion(nil, nil)
+                    return
+                }
                 
                 switch result {
                 case .success:
