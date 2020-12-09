@@ -25,5 +25,5 @@ protocol HomePresenterInterface: PresenterInterface {
 }
 
 protocol HomeInteractorInterface: InteractorInterface {
-    func searchRepositoriesWith(text: String, completion: @escaping completionRepositories)
+    func searchRepositoriesWith(text: String, page: Int, completion: @escaping completionRepositories)
 }

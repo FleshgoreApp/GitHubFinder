@@ -37,6 +37,8 @@ final class HomeViewController: BaseViewController {
     private func setupSearchController() {
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Repository name ..."
         searchController.delegate = self
     }
     

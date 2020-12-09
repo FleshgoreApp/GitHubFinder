@@ -12,7 +12,7 @@ enum NetworkEnvironment {
 }
 
 public enum GitApi {
-    case search(text:String)
+    case search(text:String, page: Int, perPage: Int = 15)
 }
 
 extension GitApi: EndPointType {
@@ -46,8 +46,8 @@ extension GitApi: EndPointType {
     //MARK: - TODO
     var task: HTTPTask {
         switch self {
-        case .search(let text):
-            return .requestParametersAndHeaders(bodyParameters: nil, urlParameters: ["q": text], additionalHeaders: headers)
+        case .search(let text, let page, let perPage):
+            return .requestParametersAndHeaders(bodyParameters: nil, urlParameters: ["q": text, "page": "\(page)", "per_page": "\(perPage)"], additionalHeaders: headers)
         }
     }
     

@@ -11,15 +11,16 @@
 import Foundation
 
 final class HomePresenter {
-
+    
     // MARK: - Private properties -
-
+    
     private unowned let view: HomeViewInterface
     private let interactor: HomeInteractorInterface
     private let wireframe: HomeWireframeInterface
+    fileprivate var currentPage: Int = 1
     
     // MARK: - Open properties -
-
+    
     var repositories: [RepoModel]? {
         didSet {
             repositories?.sort(by: >)
@@ -28,7 +29,7 @@ final class HomePresenter {
     }
     
     // MARK: - Lifecycle -
-
+    
     init(view: HomeViewInterface, interactor: HomeInteractorInterface, wireframe: HomeWireframeInterface) {
         self.view = view
         self.interactor = interactor
@@ -45,11 +46,42 @@ extension HomePresenter: HomePresenterInterface {
     
     func searchBarSearchButtonClicked(searchText: String?) {
         guard let text = searchText else { return }
-        interactor.searchRepositoriesWith(text: text, completion: { repositories, error in
-            if error == nil {
-                self.repositories = repositories?.items
+        
+        let searchGroup = DispatchGroup()
+        var temp = [RepoModel]()
+        
+        var counter = 0 {
+            didSet {
+                if counter == 2 { //Hard-code
+                    searchGroup.leave()
+                }
             }
-        })
+        }
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            searchGroup.enter()
+            //DRY, I know
+            self.interactor.searchRepositoriesWith(text: text, page: self.currentPage, completion: { repositories, error in
+                if error == nil {
+                    if let items = repositories?.items {
+                        temp.append(contentsOf: items)
+                    }
+                }
+                counter += 1
+            })
+            self.interactor.searchRepositoriesWith(text: text, page: self.currentPage+1, completion: { repositories, error in
+                if error == nil {
+                    if let items = repositories?.items {
+                        temp.append(contentsOf: items)
+                    }
+                }
+                counter += 1
+            })
+        }
+        
+        searchGroup.notify(queue: DispatchQueue.main) {
+            self.repositories = temp
+        }
     }
     
     func didSelectRowAtIndexPath(_ indexPath: IndexPath) {
