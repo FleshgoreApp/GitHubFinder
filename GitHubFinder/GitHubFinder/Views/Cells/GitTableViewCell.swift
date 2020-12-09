@@ -28,6 +28,7 @@ class GitTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
+        backgroundColor = Constant.Color.navigationBarColor
         titleLabel.text = "Some text"
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         titleLabel.tintColor = .secondaryLabel

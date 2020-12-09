@@ -12,14 +12,24 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
 
-    // MARK: - Public properties -
-    @IBOutlet weak var tableView: BaseTableView! {
+    // MARK: - IBOutlet's -
+    @IBOutlet private weak var tableView: BaseTableView! {
         didSet {
             tableView.basicSettingsWith(self)
             tableView.register(UINib(nibName: GitTableViewCell.cellID, bundle: nil), forCellReuseIdentifier: GitTableViewCell.cellID)
         }
     }
     
+    private lazy var emptyStateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        tableView.tableHeaderView = label
+        return label
+    }()
+    
+    // MARK: - properties -
     private let searchController = BaseSearchController(searchResultsController: nil)
     
     var presenter: HomePresenterInterface!
@@ -45,12 +55,20 @@ final class HomeViewController: BaseViewController {
     private func setupNavigation() {
         navigationItem.hidesSearchBarWhenScrolling = false
     }
+    
+    private func showEmptyState() {
+        let isEmpty = (presenter.repositories?.count ?? 0) > 0
+        let frame = !isEmpty ? CGRect(x: 20, y: 15, width: view.frame.width-20, height: 40) : CGRect.zero
+        emptyStateLabel.text = isEmpty ? "" : "No results"
+        emptyStateLabel.frame = frame
+    }
 }
 
 // MARK: - HomeViewInterface -
 
 extension HomeViewController: HomeViewInterface {
     func updateView() {
+        showEmptyState()
         tableView.reloadDataOnMainQueue()
     }
     
@@ -98,7 +116,7 @@ extension HomeViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        
     }
 }
 

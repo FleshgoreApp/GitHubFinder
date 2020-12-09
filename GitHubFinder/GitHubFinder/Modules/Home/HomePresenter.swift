@@ -24,7 +24,9 @@ final class HomePresenter {
     var repositories: [RepoModel]? {
         didSet {
             repositories?.sort(by: >)
-            view.updateView()
+            DispatchQueue.main.async {
+                self.view.updateView()
+            }
         }
     }
     

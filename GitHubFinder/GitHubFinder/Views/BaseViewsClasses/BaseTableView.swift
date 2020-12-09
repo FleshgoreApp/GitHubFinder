@@ -24,7 +24,7 @@ final class BaseTableView: UITableView {
     }
     
     private func setup() {
-        self.backgroundColor = Constant.Color.navigationBarColor
+        self.backgroundColor = .clear
         self.tableFooterView = UIView()
         self.keyboardDismissMode = .onDrag
     }

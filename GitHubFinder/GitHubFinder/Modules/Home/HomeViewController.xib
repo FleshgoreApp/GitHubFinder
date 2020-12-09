@@ -30,6 +30,7 @@
             <constraints>
                 <constraint firstItem="lV5-4j-jes" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="H8S-gz-aeh"/>
                 <constraint firstItem="lV5-4j-jes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HWb-hu-JzI"/>
+                <constraint firstItem="lV5-4j-jes" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="LOa-II-15w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lV5-4j-jes" secondAttribute="trailing" id="RQX-C6-f3C"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lV5-4j-jes" secondAttribute="bottom" id="Vqn-Qk-dco"/>
             </constraints>
