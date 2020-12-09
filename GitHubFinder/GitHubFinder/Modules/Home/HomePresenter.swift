@@ -48,6 +48,7 @@ extension HomePresenter: HomePresenterInterface {
         guard let text = searchText else { return }
         
         let searchGroup = DispatchGroup()
+        let userQueue = DispatchQueue.global(qos: .userInteractive)
         var temp = [RepoModel]()
         
         var counter = 0 {
@@ -58,28 +59,41 @@ extension HomePresenter: HomePresenterInterface {
             }
         }
         
-        DispatchQueue.global(qos: .userInteractive).async {
-            searchGroup.enter()
-            //DRY, I know
+        searchGroup.enter()
+        
+        userQueue.async {
             self.interactor.searchRepositoriesWith(text: text, page: self.currentPage, completion: { repositories, error in
-                if error == nil {
-                    if let items = repositories?.items {
+
+                if let items = repositories?.items, error == nil {
+                    userQueue.sync(flags: .barrier) {
                         temp.append(contentsOf: items)
+                        counter += 1
                     }
                 }
-                counter += 1
+                else {
+                    userQueue.sync(flags: .barrier) {
+                        counter += 1
+                    }
+                }
             })
+       
             self.interactor.searchRepositoriesWith(text: text, page: self.currentPage+1, completion: { repositories, error in
-                if error == nil {
-                    if let items = repositories?.items {
+                
+                if let items = repositories?.items, error == nil {
+                    userQueue.sync(flags: .barrier) {
                         temp.append(contentsOf: items)
+                        counter += 1
                     }
                 }
-                counter += 1
+                else {
+                    userQueue.sync(flags: .barrier) {
+                        counter += 1
+                    }
+                }
             })
         }
         
-        searchGroup.notify(queue: DispatchQueue.main) {
+        searchGroup.notify(queue: DispatchQueue.global()) {
             self.repositories = temp
         }
     }
